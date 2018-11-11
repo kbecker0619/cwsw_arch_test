@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="cwsw_lib" displayName="cwsw_lib" projectFiles="true">
+      <logicalFolder name="include" displayName="include" projectFiles="true">
+        <itemPath>cwsw_lib/include/ptypes.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="src" displayName="src" projectFiles="true">
+        <itemPath>cwsw_lib/src/cwsw_lib.c</itemPath>
+      </logicalFolder>
+      <itemPath>cwsw_lib/LICENSE</itemPath>
+      <itemPath>cwsw_lib/README.md</itemPath>
+      <itemPath>cwsw_lib/ctassert.h</itemPath>
+      <itemPath>cwsw_lib/cwsw_eventsim.h</itemPath>
+      <itemPath>cwsw_lib/cwsw_lib.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="i386" displayName="i386" projectFiles="true">
+        <itemPath>cwsw_arch/i386/cwsw_arch.h</itemPath>
+      </logicalFolder>
+      <itemPath>cwsw_arch/cwsw_arch_common.h</itemPath>
+      <itemPath>cfg/projcfg.h</itemPath>
+      <itemPath>cfg/projevtnames.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="cwsw_arch" displayName="cwsw_arch" projectFiles="true">
+        <itemPath>cwsw_arch/.gitignore</itemPath>
+        <itemPath>cwsw_arch/LICENSE</itemPath>
+        <itemPath>cwsw_arch/README.md</itemPath>
+      </logicalFolder>
+      <logicalFolder name="i386" displayName="i386" projectFiles="true">
+        <logicalFolder name="src" displayName="src" projectFiles="true">
+          <itemPath>cwsw_arch/i386/src/cwsw_arch.c</itemPath>
+        </logicalFolder>
+        <itemPath>cwsw_arch/i386/README.md</itemPath>
+      </logicalFolder>
+      <itemPath>ut/cwsw_arch_test.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>cwsw_lib</Elem>
+    <Elem>cwsw_arch</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>10</standard>
+          <incDir>
+            <pElem>cfg</pElem>
+            <pElem>cwsw_lib</pElem>
+            <pElem>cwsw_arch</pElem>
+            <pElem>cwsw_arch/i386</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>XPRJ_NB_${CONF}</Elem>
+          </preprocessorList>
+        </cTool>
+      </compileType>
+      <item path="cfg/projcfg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/projevtnames.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/.gitignore" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/LICENSE" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/README.md" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/cwsw_arch_common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/i386/README.md" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/i386/cwsw_arch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/i386/src/cwsw_arch.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cwsw_lib/LICENSE" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_lib/README.md" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_lib/ctassert.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_lib/cwsw_eventsim.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_lib/cwsw_lib.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_lib/include/ptypes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_lib/src/cwsw_lib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ut/cwsw_arch_test.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="cfg/projcfg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cfg/projevtnames.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/.gitignore" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/LICENSE" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/README.md" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/cwsw_arch_common.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/i386/README.md" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/i386/cwsw_arch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/i386/src/cwsw_arch.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="cwsw_lib/LICENSE" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_lib/README.md" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_lib/ctassert.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_lib/cwsw_eventsim.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_lib/cwsw_lib.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_lib/include/ptypes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_lib/src/cwsw_lib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ut/cwsw_arch_test.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
