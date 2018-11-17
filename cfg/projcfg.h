@@ -112,18 +112,12 @@ extern "C" {
 	#define	XPRJ_Debug_MSC				0
 	#define	XPRJ_Win_MinGW_Debug 		0
 
-#elif defined(XPRJ_Win_MinGW_Debug)
-	/* This is the configuration intended for development on Windows, using the MinGW tool suite */
-	#define XPRJ_Debug_MSC			0
-	#define	XPRJ_CVI_Debug			0
-	#define XPRJ_Debug_Linux_GCC	0
-
 #elif defined(XPRJ_NB_Debug)
-    #define XPRJ_Win_MinGW_Debug    0
-    #define XPRJ_Debug_Linux_GCC    0
-    #define XPRJ_Debug_MSC			0
-    #define	XPRJ_CVI_Debug			0
-	#define XPRJ_Debug_Linux_GCC	0
+	#define XPRJ_Win_MinGW_Debug    	0
+	#define XPRJ_Debug_Linux_GCC    	0
+	#define XPRJ_Debug_MSC				0
+	#define	XPRJ_CVI_Debug				0
+	#define XPRJ_Debug_Linux_GCC		0
 
 #elif defined(XPRJ_Debug_Cx_AtmelSamv71)
 	/* This configuration is intended for the Atmel SAMV71 Xplained Ultra board */
@@ -140,12 +134,13 @@ extern "C" {
 
 #elif defined(XPRJ_CVI_Debug)
 	#define	XPRJ_Debug_MSC				0
+	#define XPRJ_NB_Debug				0
 	#define	XPRJ_Win_MinGW_Debug 		0
 	#define XPRJ_Debug_Linux_GCC		0
 	#define XPRJ_pic32mz_ef_sk			0
 
 #elif (XPRJ_Debug_Win_MZ2048EFM) || defined(XPRJ_pic32mz_ef_sk)
-    /* xMPLAB assigns XPRJ_pic32mz_ef_sk=pic32mz_ef_sk, but the latter signal is not defined to be anything */
+	/* xMPLAB assigns XPRJ_pic32mz_ef_sk=pic32mz_ef_sk, but the latter signal is not defined to be anything */
 	#define pic32mz_ef_sk				1
 
 	#define Debug_MZ2048EFM				1
@@ -185,6 +180,7 @@ extern "C" {
 #endif
 
 #if (XPRJ_CVI_Debug)
+	#define WEAK						/* nothing */
 	#define pic32mz_ef_sk				(-1)	/* must make this mismatch the project def of the same name */
 	// use cwsw simulated events to achieve separation between UI panels
 	#define USE_NOTIFICATION_EVENTS		(1)

@@ -1,10 +1,10 @@
 [Project Header]
 Version = 710
-Pathname = "/e/_Projects/pdev2/cwsw_lib.git/cwsw_lib.prj"
+Pathname = "/e/_Projects/pdev2/cwsw_arch.git/cwsw_arch.prj"
 CVI Dir = "/e/_programs/national instruments/cvi71"
 IVI Standard Root Dir = "/C/Program Files (x86)/IVI"
 VXIplug&play Framework Dir = "/c/vxipnp/winnt"
-Number of Files = 8
+Number of Files = 10
 Target Type = "Executable"
 Flags = 16
 
@@ -14,41 +14,41 @@ Res Id = 1
 Path Is Rel = True
 Path Rel To = "Project"
 Path Rel Path = "cwsw_lib/ctassert.h"
-Path = "/e/_Projects/pdev2/cwsw_lib.git/cwsw_lib/ctassert.h"
+Path = "/e/_Projects/pdev2/cwsw_arch.git/cwsw_lib/ctassert.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
 [File 0002]
-File Type = "Include"
+File Type = "CSource"
 Res Id = 2
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "cwsw_lib/cwsw_eventsim.h"
-Path = "/e/_Projects/pdev2/cwsw_lib.git/cwsw_lib/cwsw_eventsim.h"
-Exclude = False
-Project Flags = 0
-Folder = "Include Files"
-
-[File 0003]
-File Type = "CSource"
-Res Id = 3
-Path Is Rel = True
-Path Rel To = "Project"
-Path Rel Path = "cwsw_lib/src/cwsw_lib.c"
-Path = "/e/_Projects/pdev2/cwsw_lib.git/cwsw_lib/src/cwsw_lib.c"
+Path Rel Path = "cwsw_arch/i386/src/cwsw_arch.c"
+Path = "/e/_Projects/pdev2/cwsw_arch.git/cwsw_arch/i386/src/cwsw_arch.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
 Folder = "Source Files"
+
+[File 0003]
+File Type = "Include"
+Res Id = 3
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "cwsw_arch/i386/cwsw_arch.h"
+Path = "/e/_Projects/pdev2/cwsw_arch.git/cwsw_arch/i386/cwsw_arch.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
 
 [File 0004]
 File Type = "Include"
 Res Id = 4
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "cwsw_lib/cwsw_lib.h"
-Path = "/e/_Projects/pdev2/cwsw_lib.git/cwsw_lib/cwsw_lib.h"
+Path Rel Path = "cwsw_lib/cwsw_eventsim.h"
+Path = "/e/_Projects/pdev2/cwsw_arch.git/cwsw_lib/cwsw_eventsim.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -58,8 +58,8 @@ File Type = "CSource"
 Res Id = 5
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "ut/main.c"
-Path = "/e/_Projects/pdev2/cwsw_lib.git/ut/main.c"
+Path Rel Path = "cwsw_lib/src/cwsw_lib.c"
+Path = "/e/_Projects/pdev2/cwsw_arch.git/cwsw_lib/src/cwsw_lib.c"
 Exclude = False
 Compile Into Object File = False
 Project Flags = 0
@@ -70,30 +70,53 @@ File Type = "Include"
 Res Id = 6
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "cfg/projcfg.h"
-Path = "/e/_Projects/pdev2/cwsw_lib.git/cfg/projcfg.h"
+Path Rel Path = "cwsw_lib/cwsw_lib.h"
+Path = "/e/_Projects/pdev2/cwsw_arch.git/cwsw_lib/cwsw_lib.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
 
 [File 0007]
-File Type = "Include"
+File Type = "CSource"
 Res Id = 7
 Path Is Rel = True
 Path Rel To = "Project"
-Path Rel Path = "cfg/projevtnames.h"
-Path = "/e/_Projects/pdev2/cwsw_lib.git/cfg/projevtnames.h"
+Path Rel Path = "ut/main.c"
+Path = "/e/_Projects/pdev2/cwsw_arch.git/ut/main.c"
 Exclude = False
+Compile Into Object File = False
 Project Flags = 0
-Folder = "Include Files"
+Folder = "Source Files"
 
 [File 0008]
 File Type = "Include"
 Res Id = 8
 Path Is Rel = True
 Path Rel To = "Project"
+Path Rel Path = "cfg/projcfg.h"
+Path = "/e/_Projects/pdev2/cwsw_arch.git/cfg/projcfg.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0009]
+File Type = "Include"
+Res Id = 9
+Path Is Rel = True
+Path Rel To = "Project"
+Path Rel Path = "cfg/projevtnames.h"
+Path = "/e/_Projects/pdev2/cwsw_arch.git/cfg/projevtnames.h"
+Exclude = False
+Project Flags = 0
+Folder = "Include Files"
+
+[File 0010]
+File Type = "Include"
+Res Id = 10
+Path Is Rel = True
+Path Rel To = "Project"
 Path Rel Path = "cwsw_lib/include/ptypes.h"
-Path = "/e/_Projects/pdev2/cwsw_lib.git/cwsw_lib/include/ptypes.h"
+Path = "/e/_Projects/pdev2/cwsw_arch.git/cwsw_lib/include/ptypes.h"
 Exclude = False
 Project Flags = 0
 Folder = "Include Files"
@@ -126,25 +149,29 @@ Compiler Defines = "/DWIN32_LEAN_AND_MEAN /DXPRJ_CVI_Debug=1"
 Include Path 1 Is Rel = True
 Include Path 1 Rel To = "Project"
 Include Path 1 Rel Path = "ut"
-Include Path 1 = "/e/_Projects/pdev2/cwsw_lib.git/ut"
+Include Path 1 = "/e/_Projects/pdev2/cwsw_arch.git/ut"
 Include Path 2 Is Rel = True
 Include Path 2 Rel To = "Project"
 Include Path 2 Rel Path = "cfg"
-Include Path 2 = "/e/_Projects/pdev2/cwsw_lib.git/cfg"
+Include Path 2 = "/e/_Projects/pdev2/cwsw_arch.git/cfg"
 Include Path 3 Is Rel = True
 Include Path 3 Rel To = "Project"
-Include Path 3 Rel Path = "cwsw_lib"
-Include Path 3 = "/e/_Projects/pdev2/cwsw_lib.git/cwsw_lib"
+Include Path 3 Rel Path = "cwsw_arch"
+Include Path 3 = "/e/_Projects/pdev2/cwsw_arch.git/cwsw_arch"
+Include Path 4 Is Rel = True
+Include Path 4 Rel To = "Project"
+Include Path 4 Rel Path = "cwsw_lib"
+Include Path 4 = "/e/_Projects/pdev2/cwsw_arch.git/cwsw_lib"
 
 [Create Executable]
 Executable File_Debug Is Rel = True
 Executable File_Debug Rel To = "Project"
-Executable File_Debug Rel Path = "cwsw_lib_dbg.exe"
-Executable File_Debug = "/e/_Projects/pdev2/cwsw_lib.git/cwsw_lib_dbg.exe"
+Executable File_Debug Rel Path = "cwsw_arch_dbg.exe"
+Executable File_Debug = "/e/_Projects/pdev2/cwsw_arch.git/cwsw_arch_dbg.exe"
 Executable File_Release Is Rel = True
 Executable File_Release Rel To = "Project"
-Executable File_Release Rel Path = "cwsw_lib.exe"
-Executable File_Release = "/e/_Projects/pdev2/cwsw_lib.git/cwsw_lib.exe"
+Executable File_Release Rel Path = "cwsw_arch.exe"
+Executable File_Release = "/e/_Projects/pdev2/cwsw_arch.git/cwsw_arch.exe"
 Icon File Is Rel = False
 Icon File = ""
 Application Title = ""
