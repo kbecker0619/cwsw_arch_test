@@ -1,74 +1,65 @@
-/** @file
+/*
+ * File:   cwsw_arch_test.c
+ * Author: kbecker
  *
- *	Description:
- *
- *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
- *
- *	Original:
- *	Created on: Jan 27, 2018
- *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
+ * Created on Nov 12, 2018, 1:19:58 AM
  */
 
-// ============================================================================
-// ----	Include Files ---------------------------------------------------------
-// ============================================================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <CUnit/Basic.h>
 
-#include "projcfg.h"
+/*
+ * CUnit Test Suite
+ */
 
-// ----	System Headers --------------------------
-#include <stdlib.h>     /* EXIT_SUCCESS */
-
-// ----	Project Headers -------------------------
-#include "cwsw_lib.h"
-#include "cwsw_eventsim.h"
-
-// ----	Module Headers --------------------------
-#include "cwsw_arch.h"
-
-
-// ============================================================================
-// ----	Constants -------------------------------------------------------------
-// ============================================================================
-
-// ============================================================================
-// ----	Type Definitions ------------------------------------------------------
-// ============================================================================
-
-// ============================================================================
-// ----	Global Variables ------------------------------------------------------
-// ============================================================================
-
-// ============================================================================
-// ----	Module-level Variables ------------------------------------------------
-// ============================================================================
-
-
-// ============================================================================
-// ----	Private Prototypes ----------------------------------------------------
-// ============================================================================
-
-// ============================================================================
-// ----	Public Functions ------------------------------------------------------
-// ============================================================================
-
-void
-NotificationHandler__evTerminateRequested(tNotificationPayload EventData)
+int init_suite(void)
 {
-	UNUSED(EventData);
-x	(void)puts("Goodbye Cruel World!");
+    return 0;
 }
 
-
-int main(void)
+int clean_suite(void)
 {
-	tNotificationPayload ev = {0};
-	(void)Init(Cwsw_Lib);		// Cwsw_Lib__Init()
-	(void)Init(Cwsw_Arch);		// Cwsw_Arch__Init()
+    return 0;
+}
 
-	SendNotification(evTerminateRequested, ev);
-	return EXIT_SUCCESS;
+void test1()
+{
+    CU_ASSERT(2 * 2 == 4);
+}
+
+void test2()
+{
+    CU_ASSERT(2 * 2 == 5);
+}
+
+int main()
+{
+    CU_pSuite pSuite = NULL;
+
+    /* Initialize the CUnit test registry */
+    if (CUE_SUCCESS != CU_initialize_registry())
+        return CU_get_error();
+
+    /* Add a suite to the registry */
+    pSuite = CU_add_suite("cwsw_arch_test", init_suite, clean_suite);
+    if (NULL == pSuite)
+    {
+        CU_cleanup_registry();
+        return CU_get_error();
+    }
+
+    /* Add the tests to the suite */
+    if ((NULL == CU_add_test(pSuite, "test1", test1)) ||
+        (NULL == CU_add_test(pSuite, "test2", test2)))
+    {
+        CU_cleanup_registry();
+        return CU_get_error();
+    }
+
+    /* Run all tests using the CUnit Basic interface */
+    CU_basic_set_mode(CU_BRM_VERBOSE);
+    CU_basic_run_tests();
+    CU_cleanup_registry();
+    return CU_get_error();
 }

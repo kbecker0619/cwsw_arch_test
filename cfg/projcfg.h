@@ -96,31 +96,32 @@ extern "C" {
 	/* This configuration is created by Eclipse; we do not want it used */
 	#error For now, do not build with the "Release" build target active
 
-#elif defined(XPRJ_Debug_Win_MinGW)
+#elif defined(XPRJ_Win_MinGW_Debug)
 	/* This is the configuration intended for development on Windows, using the MinGW tool suite */
 	#define XPRJ_Debug_Linux_GCC		0
 	#define XPRJ_Debug_MSC				0
-	#define	XPRJ_Debug_CVI				0
+	#define	XPRJ_CVI_Debug				0
 	#define XPRJ_Debug_Win_MZ2048EFM	0
 
 #elif defined(XPRJ_Debug_Linux_GCC) || defined(XPRJ_Debug_Linux_GCC_Desktop)
 	/* This is the configuration intended for development & debugging in a Linux VM */
 	/* The 1st is intended to debug on a PowerPC Target from a Linux development environment */
 	/* The 2nd (Desktop) is intended for building within S32DS on Linux for a Linux debugging session */
-	#define	XPRJ_Debug_CVI				0
+	#define	XPRJ_CVI_Debug				0
 	#define	XPRJ_Debug_MSC				0
-	#define	XPRJ_Debug_Win_MinGW 		0
+	#define	XPRJ_Win_MinGW_Debug 		0
 
-#elif defined(XPRJ_Debug_Win_MinGW)
+#elif defined(XPRJ_Win_MinGW_Debug)
 	/* This is the configuration intended for development on Windows, using the MinGW tool suite */
 	#define XPRJ_Debug_MSC			0
-	#define	XPRJ_Debug_CVI			0
+	#define	XPRJ_CVI_Debug			0
 	#define XPRJ_Debug_Linux_GCC	0
 
 #elif defined(XPRJ_NB_Debug)
-    #define XPRJ_Debug_Win_MinGW    0
+    #define XPRJ_Win_MinGW_Debug    0
+    #define XPRJ_Debug_Linux_GCC    0
     #define XPRJ_Debug_MSC			0
-    #define	XPRJ_Debug_CVI			0
+    #define	XPRJ_CVI_Debug			0
 	#define XPRJ_Debug_Linux_GCC	0
 
 #elif defined(XPRJ_Debug_Cx_AtmelSamv71)
@@ -133,13 +134,12 @@ extern "C" {
 	 * that claimed to work w/ VS8 or VS10, but you could also probably pull them from any other
 	 * compiler you may have installed.
 	 */
-	#define XPRJ_Debug_Win_MinGW	false
-	#define	XPRJ_Debug_CVI			false
+	#define XPRJ_Win_MinGW_Debug	false
+	#define	XPRJ_CVI_Debug			false
 
-#elif defined(_CVI_)
-	#define	XPRJ_Debug_CVI				1
+#elif defined(XPRJ_CVI_Debug)
 	#define	XPRJ_Debug_MSC				0
-	#define	XPRJ_Debug_Win_MinGW 		0
+	#define	XPRJ_Win_MinGW_Debug 		0
 	#define XPRJ_Debug_Linux_GCC		0
 	#define XPRJ_pic32mz_ef_sk			0
 
@@ -148,9 +148,9 @@ extern "C" {
 	#define pic32mz_ef_sk				1
 
 	#define Debug_MZ2048EFM				1
-	#define XPRJ_Debug_Win_MinGW		0
+	#define XPRJ_Win_MinGW_Debug		0
 	#define XPRJ_Debug_Linux_GCC		0
-	#define	XPRJ_Debug_CVI				0
+	#define	XPRJ_CVI_Debug				0
 	#define XPRJ_Debug_MSC				0
 
 #elif (XPRJ_Debug_Cx_AtmelSamv71)
@@ -160,9 +160,9 @@ extern "C" {
 	#define pic32mz_ef_sk				(-1)	/* must make this mismatch the project def of the same name */
 
 	/* This configuration is intended for the NXP Calypso Dev Board */
-	#define XPRJ_Debug_Win_MinGW		(0)
+	#define XPRJ_Win_MinGW_Debug		(0)
 	#define XPRJ_Debug_Linux_GCC		(0)
-	#define	XPRJ_Debug_CVI				(0)
+	#define	XPRJ_CVI_Debug				(0)
 	#define XPRJ_Debug_MSC				(0)
 	#define Debug_MZ2048EFM				(0)
 
@@ -183,7 +183,7 @@ extern "C" {
 
 #endif
 
-#if (XPRJ_Debug_CVI)
+#if (XPRJ_CVI_Debug)
 	#define pic32mz_ef_sk				(-1)	/* must make this mismatch the project def of the same name */
 	// use cwsw simulated events to achieve separation between UI panels
 	#define USE_NOTIFICATION_EVENTS		(1)
@@ -214,7 +214,11 @@ extern "C" {
  *	define. Pick reasonable defaults if not defined.
  */
 #if !defined(BUILD_FOR_UNIT_TEST)
-	#if (XPRJ_Debug_Linux_GCC) || (XPRJ_Debug_Win_MinGW) || (XPRJ_Debug_MSC) || (XPRJ_Debug_CVI)
+	#if (XPRJ_Debug_Linux_GCC)	||  \
+		(XPRJ_Win_MinGW_Debug)	||  \
+		(XPRJ_NB_Debug)			||  \
+		(XPRJ_Debug_MSC) 		||  \
+		(XPRJ_CVI_Debug)
 		#define BUILD_FOR_UNIT_TEST		(true)
 
 	#else
