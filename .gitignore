@@ -57,3 +57,5 @@ dist
 *.bak
 .settings
 cvibuild.cwsw_arch
+*.cws
+*.cdb
