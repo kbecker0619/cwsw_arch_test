@@ -100,7 +100,7 @@ extern "C" {
 	/* This is the configuration intended for Eclipse development on Windows, using the MinGW tool suite */
 	#define XPRJ_Debug_Linux_GCC		0
 	#define XPRJ_NB_Debug				0
-	#define XPRJ_Debug_MSC				0
+	#define XPRJ_MSVC_Debug				0
 	#define	XPRJ_CVI_Debug				0
 	#define XPRJ_Debug_Win_MZ2048EFM	0
 
@@ -109,26 +109,26 @@ extern "C" {
 	/* The 1st is intended to debug on a PowerPC Target from a Linux development environment */
 	/* The 2nd (Desktop) is intended for building within S32DS on Linux for a Linux debugging session */
 	#define	XPRJ_CVI_Debug				0
-	#define	XPRJ_Debug_MSC				0
+	#define	XPRJ_MSVC_Debug				0
 	#define	XPRJ_Win_MinGW_Debug 		0
 
 #elif defined(XPRJ_Win_MinGW_Debug)
 	/* This is the configuration intended for development on Windows, using the MinGW tool suite */
-	#define XPRJ_Debug_MSC			0
-	#define	XPRJ_CVI_Debug			0
-	#define XPRJ_Debug_Linux_GCC	0
+	#define XPRJ_MSVC_Debug				0
+	#define	XPRJ_CVI_Debug				0
+	#define XPRJ_Debug_Linux_GCC		0
 
 #elif defined(XPRJ_NB_Debug)
-    #define XPRJ_Win_MinGW_Debug    0
-    #define XPRJ_Debug_Linux_GCC    0
-    #define XPRJ_Debug_MSC			0
-    #define	XPRJ_CVI_Debug			0
-	#define XPRJ_Debug_Linux_GCC	0
+    #define XPRJ_Win_MinGW_Debug		0
+    #define XPRJ_Debug_Linux_GCC	    0
+    #define XPRJ_MSVC_Debug				0
+    #define	XPRJ_CVI_Debug				0
+	#define XPRJ_Debug_Linux_GCC		0
 
 #elif defined(XPRJ_Debug_Cx_AtmelSamv71)
 	/* This configuration is intended for the Atmel SAMV71 Xplained Ultra board */
 
-#elif (XPRJ_Debug_MSC)
+#elif (XPRJ_MSVC_Debug)
 	/* Visual Studio 8, which is decidedly shy of C11 */
 	/* NOTE: VS8 does not ship w/ headers <stdint.h> or <stdbool.h>, so i found alternate versions
 	 * and copied them into my install directory. i happened to find some web sites w/ versions
@@ -136,10 +136,12 @@ extern "C" {
 	 * compiler you may have installed.
 	 */
 	#define XPRJ_Win_MinGW_Debug	false
+	#define XPRJ_Debug_Linux_GCC	false
+	#define XPRJ_NB_Debug			false
 	#define	XPRJ_CVI_Debug			false
 
 #elif defined(XPRJ_CVI_Debug)
-	#define	XPRJ_Debug_MSC				0
+	#define	XPRJ_MSVC_Debug				0
 	#define	XPRJ_Win_MinGW_Debug 		0
 	#define XPRJ_Debug_Linux_GCC		0
 	#define XPRJ_pic32mz_ef_sk			0
@@ -152,7 +154,7 @@ extern "C" {
 	#define XPRJ_Win_MinGW_Debug		0
 	#define XPRJ_Debug_Linux_GCC		0
 	#define	XPRJ_CVI_Debug				0
-	#define XPRJ_Debug_MSC				0
+	#define XPRJ_MSVC_Debug				0
 
 #elif (XPRJ_Debug_Cx_AtmelSamv71)
 	/* This configuration is intended for the Atmel SAMV71 Xplained Ultra board */
@@ -164,11 +166,11 @@ extern "C" {
 	#define XPRJ_Win_MinGW_Debug		(0)
 	#define XPRJ_Debug_Linux_GCC		(0)
 	#define	XPRJ_CVI_Debug				(0)
-	#define XPRJ_Debug_MSC				(0)
+	#define XPRJ_MSVC_Debug				(0)
 	#define Debug_MZ2048EFM				(0)
 
 #else
-#error Must define Eclipse symbol XPRJ_${ConfigName}
+#error Must define command-line symbol XPRJ_${ConfigName}
 
 #endif
 
@@ -218,7 +220,7 @@ extern "C" {
 	#if (XPRJ_Debug_Linux_GCC)	||  \
 		(XPRJ_Win_MinGW_Debug)	||  \
 		(XPRJ_NB_Debug)			||  \
-		(XPRJ_Debug_MSC) 		||  \
+		(XPRJ_MSVC_Debug) 		||  \
 		(XPRJ_CVI_Debug)
 		#define BUILD_FOR_UNIT_TEST		(true)
 
@@ -260,7 +262,7 @@ extern "C" {
 #define WEAK __weak
 
 #elif defined(_MSC_VER) || defined(_CVI_)	/* visual studio 8 and LabWindows/CVI v7.1 */
-/* WEAK not available */
+#define WEAK /* WEAK not available */
 
 #else
 #error Unrecognized or unsupported compiler
