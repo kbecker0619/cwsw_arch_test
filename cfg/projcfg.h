@@ -97,8 +97,9 @@ extern "C" {
 	#error For now, do not build with the "Release" build target active
 
 #elif defined(XPRJ_Win_MinGW_Debug)
-	/* This is the configuration intended for development on Windows, using the MinGW tool suite */
+	/* This is the configuration intended for Eclipse development on Windows, using the MinGW tool suite */
 	#define XPRJ_Debug_Linux_GCC		0
+	#define XPRJ_NB_Debug				0
 	#define XPRJ_Debug_MSC				0
 	#define	XPRJ_CVI_Debug				0
 	#define XPRJ_Debug_Win_MZ2048EFM	0

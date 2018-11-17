@@ -68,25 +68,25 @@ clean_suite(void)
 }
 
 static void
-init_lib()
+test_init_lib()
 {
     CU_ASSERT(!Init(Cwsw_Lib));
 }
 
 static void
-check_critical_section()
+test_critical_section_en_dis_able()
 {
     extern int protection_count;
-    CU_ASSERT(protection_count == 0);
-    CU_ASSERT(Cwsw_Critical_Release(0) == -1);
-    CU_ASSERT(protection_count == -1);
-    CU_ASSERT(Cwsw_Critical_Protect(0) == 1);
-    CU_ASSERT(protection_count == 1);
-    CU_ASSERT(Cwsw_Critical_Release(0) == 0);
-    CU_ASSERT(protection_count == 0);
+    CU_ASSERT_EQUAL(protection_count, 0);
+    CU_ASSERT_EQUAL(Cwsw_Critical_Release(0), -1);
+    CU_ASSERT_EQUAL(protection_count, -1);
+    CU_ASSERT_EQUAL(Cwsw_Critical_Protect(0), 1);
+    CU_ASSERT_EQUAL(protection_count, 1);
+    CU_ASSERT_EQUAL(Cwsw_Critical_Release(0), 0);
+    CU_ASSERT_EQUAL(protection_count, 0);
     protection_count = INT_MAX;
-    CU_ASSERT(Cwsw_Critical_Protect(0) == INT_MIN);
-    CU_ASSERT(protection_count == INT_MIN);
+    CU_ASSERT_EQUAL(Cwsw_Critical_Protect(0), INT_MIN);
+    CU_ASSERT_EQUAL(protection_count, INT_MIN);
 }
 
 int main(void)
@@ -108,8 +108,8 @@ int main(void)
 	}
 
 	/* Add the tests to the suite */
-	if( (NULL == CU_add_test(pSuite, "ConfirmUninit", init_lib))    ||
-        (NULL == CU_add_test(pSuite, "Critical Section", check_critical_section)))
+	if( (NULL == CU_add_test(pSuite, "ConfirmUninit", test_init_lib))    ||
+        (NULL == CU_add_test(pSuite, "Critical Section", test_critical_section_en_dis_able)))
 	{
 		CU_cleanup_registry();
 		return CU_get_error();
