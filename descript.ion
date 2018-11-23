@@ -5,13 +5,14 @@ build NetBeans build folder
 cfg Project-specific configuration headers
 cvibuild.cwsw_lib LW-CVI
 cwsw_arch GIT submodule: this component's code
+cwsw_arch.cws LW-CVI Workspace for this component
+cwsw_arch.prj LW-CVI project file
 cwsw_lib GIT submodule: support library used for UT
-cwsw_lib.cws LW-CVI Workspace for this component
-cwsw_lib.prj LW-CVI project file
 Debug Eclipse build folder
 descript.ion 7-Zip file that provides file commentary
+dist NetBeans output  folder
 doc Documentation folder for this component
 Makefile NetBeans makefile. Don't corrupt!
-nbproject netBeans project folder
+nbproject NetBeans project folder
 src Container for the CWSW LIB submodule
 ut Unit Test sources
