@@ -35,9 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/app/main.o \
 	${OBJECTDIR}/cwsw_arch/i386/src/cwsw_arch.o \
-	${OBJECTDIR}/cwsw_lib/src/cwsw_lib.o \
-	${OBJECTDIR}/ut/main.o
+	${OBJECTDIR}/cwsw_lib/src/cwsw_lib.o
 
 # Test Directory
 TESTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tests
@@ -76,6 +76,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cwsw_arch.git.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cwsw_arch.git ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/app/main.o: app/main.c
+	${MKDIR} -p ${OBJECTDIR}/app
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/app/main.o app/main.c
+
 ${OBJECTDIR}/cwsw_arch/i386/src/cwsw_arch.o: cwsw_arch/i386/src/cwsw_arch.c
 	${MKDIR} -p ${OBJECTDIR}/cwsw_arch/i386/src
 	${RM} "$@.d"
@@ -85,11 +90,6 @@ ${OBJECTDIR}/cwsw_lib/src/cwsw_lib.o: cwsw_lib/src/cwsw_lib.c
 	${MKDIR} -p ${OBJECTDIR}/cwsw_lib/src
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cwsw_lib/src/cwsw_lib.o cwsw_lib/src/cwsw_lib.c
-
-${OBJECTDIR}/ut/main.o: ut/main.c
-	${MKDIR} -p ${OBJECTDIR}/ut
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ut/main.o ut/main.c
 
 # Subprojects
 .build-subprojects:
@@ -119,6 +119,19 @@ ${TESTDIR}/ut/cwsw_lib_test.o: ut/cwsw_lib_test.c
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${TESTDIR}/ut/cwsw_lib_test.o ut/cwsw_lib_test.c
 
 
+${OBJECTDIR}/app/main_nomain.o: ${OBJECTDIR}/app/main.o app/main.c 
+	${MKDIR} -p ${OBJECTDIR}/app
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/app/main.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.c) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/app/main_nomain.o app/main.c;\
+	else  \
+	    ${CP} ${OBJECTDIR}/app/main.o ${OBJECTDIR}/app/main_nomain.o;\
+	fi
+
 ${OBJECTDIR}/cwsw_arch/i386/src/cwsw_arch_nomain.o: ${OBJECTDIR}/cwsw_arch/i386/src/cwsw_arch.o cwsw_arch/i386/src/cwsw_arch.c 
 	${MKDIR} -p ${OBJECTDIR}/cwsw_arch/i386/src
 	@NMOUTPUT=`${NM} ${OBJECTDIR}/cwsw_arch/i386/src/cwsw_arch.o`; \
@@ -143,19 +156,6 @@ ${OBJECTDIR}/cwsw_lib/src/cwsw_lib_nomain.o: ${OBJECTDIR}/cwsw_lib/src/cwsw_lib.
 	    $(COMPILE.c) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cwsw_lib/src/cwsw_lib_nomain.o cwsw_lib/src/cwsw_lib.c;\
 	else  \
 	    ${CP} ${OBJECTDIR}/cwsw_lib/src/cwsw_lib.o ${OBJECTDIR}/cwsw_lib/src/cwsw_lib_nomain.o;\
-	fi
-
-${OBJECTDIR}/ut/main_nomain.o: ${OBJECTDIR}/ut/main.o ut/main.c 
-	${MKDIR} -p ${OBJECTDIR}/ut
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/ut/main.o`; \
-	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
-	then  \
-	    ${RM} "$@.d";\
-	    $(COMPILE.c) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ut/main_nomain.o ut/main.c;\
-	else  \
-	    ${CP} ${OBJECTDIR}/ut/main.o ${OBJECTDIR}/ut/main_nomain.o;\
 	fi
 
 # Run Test Targets

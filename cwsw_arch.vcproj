@@ -225,7 +225,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\ut\main.c"
+				RelativePath=".\app\main.c"
 				>
 			</File>
 		</Filter>
