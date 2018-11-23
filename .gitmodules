@@ -7,7 +7,7 @@
 	url = git@github.com:kbecker0619/cwsw_arch_code.git
 	branch = development
 [submodule "arch_doc"]
-	path = arch_doc
+	path = doc/arch_doc
 	url = git@github.com:kbecker0619/cwsw_arch_doc.git
 [submodule "lib_docc"]
 	path = doc/lib_doc
