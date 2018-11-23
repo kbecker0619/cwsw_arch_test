@@ -7,6 +7,7 @@ cvibuild.cwsw_lib LW-CVI
 cwsw_arch GIT submodule: this component's code
 cwsw_arch.cws LW-CVI Workspace for this component
 cwsw_arch.prj LW-CVI project file
+cwsw_arch.vcproj MSVC project file
 cwsw_lib GIT submodule: support library used for UT
 Debug Eclipse build folder
 descript.ion 7-Zip file that provides file commentary

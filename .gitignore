@@ -63,3 +63,4 @@ dist
 *.cdb
 cvibuild.cwsw_lib
 /.settings/
+.dep.inc
