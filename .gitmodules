@@ -13,5 +13,5 @@
 	path = doc/lib_doc
 	url = git@github.com:kbecker0619/cwsw_lib_doc.git
 [submodule "ut_lib"]
-	path = ut_lib
+	path = ut/ut_lib
 	url = git@github.com:kbecker0619/cwsw_lib_ut.git

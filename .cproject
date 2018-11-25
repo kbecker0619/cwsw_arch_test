@@ -55,17 +55,11 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.cygwin.exe.debug.1102660798" name="Cygwin C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.cygwin.exe.debug"/>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.2008605049" name="cwsw_arch_test.c" rcbsApplicability="disable" resourcePath="ut/cwsw_arch_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.debug.2021471759.1070546819">
-						<tool id="cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.debug.2021471759.1070546819" name="Cygwin C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.debug.2021471759"/>
-						<tool customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.1154420040" name="Resource Custom Build Step">
-							<inputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.inputtype.132581476" name="Resource Custom Build Step Input Type">
-								<additionalInput kind="additionalinputdependency" paths=""/>
-							</inputType>
-							<outputType id="org.eclipse.cdt.managedbuilder.ui.rcbs.outputtype.2040737376" name="Resource Custom Build Step Output Type"/>
-						</tool>
+					<fileInfo id="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.766855659" name="cwsw_lib_test.c" rcbsApplicability="disable" resourcePath="ut/ut_lib/cwsw_lib_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.debug.2021471759.1810443886">
+						<tool id="cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.debug.2021471759.1810443886" name="Cygwin C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.debug.2021471759"/>
 					</fileInfo>
 					<sourceEntries>
-						<entry excluding="ut/cwsw_arch_test.c|ut/main.c|ut/cwsw_lib_test.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="ut/ut_lib/cwsw_lib_test.c|ut/cwsw_arch_test.c|ut/main.c|ut/cwsw_lib_test.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
