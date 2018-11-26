@@ -58,7 +58,7 @@
                      displayName="cwsw_lib_tests"
                      projectFiles="true"
                      kind="TEST">
-        <itemPath>ut/cwsw_lib_test.c</itemPath>
+        <itemPath>ut/ut_lib/cwsw_lib_test.c</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -147,7 +147,7 @@
       </folder>
       <item path="ut/cwsw_arch_test.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="ut/cwsw_lib_test.c" ex="false" tool="0" flavor2="0">
+      <item path="ut/ut_lib/cwsw_lib_test.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -223,7 +223,7 @@
       </folder>
       <item path="ut/cwsw_arch_test.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="ut/cwsw_lib_test.c" ex="false" tool="0" flavor2="0">
+      <item path="ut/ut_lib/cwsw_lib_test.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
   </confs>
