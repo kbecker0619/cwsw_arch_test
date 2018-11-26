@@ -10,7 +10,7 @@
 	path = doc/doc_arch
 	url = git@github.com:kbecker0619/cwsw_arch_doc.git
 [submodule "lib_docc"]
-	path = doc/lib_doc
+	path = doc/doc_lib
 	url = git@github.com:kbecker0619/cwsw_lib_doc.git
 [submodule "ut_lib"]
 	path = ut/ut_lib
