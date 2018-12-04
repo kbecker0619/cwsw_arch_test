@@ -52,7 +52,7 @@
                      displayName="cwsw_arch_tests"
                      projectFiles="true"
                      kind="TEST">
-        <itemPath>ut/cwsw_arch_test.c</itemPath>
+        <itemPath>ut/ut_arch/cwsw_arch_test.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2"
                      displayName="cwsw_lib_tests"
@@ -76,7 +76,7 @@
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <compilerSet>default</compilerSet>
+        <compilerSet>Cygwin|Cygwin</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
@@ -92,8 +92,11 @@
           <preprocessorList>
             <Elem>XPRJ_NB_${CONF}</Elem>
           </preprocessorList>
-          <warningLevel>2</warningLevel>
+          <warningLevel>0</warningLevel>
         </cTool>
+        <ccTool>
+          <warningLevel>2</warningLevel>
+        </ccTool>
       </compileType>
       <item path="app/main.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -145,7 +148,7 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <item path="ut/cwsw_arch_test.c" ex="false" tool="0" flavor2="0">
+      <item path="ut/ut_arch/cwsw_arch_test.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ut/ut_lib/cwsw_lib_test.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -221,7 +224,7 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <item path="ut/cwsw_arch_test.c" ex="false" tool="0" flavor2="0">
+      <item path="ut/ut_arch/cwsw_arch_test.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ut/ut_lib/cwsw_lib_test.c" ex="false" tool="0" flavor2="0">
       </item>
