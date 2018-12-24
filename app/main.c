@@ -46,7 +46,6 @@
 // ----	Module-level Variables ------------------------------------------------
 // ============================================================================
 
-
 // ============================================================================
 // ----	Private Prototypes ----------------------------------------------------
 // ============================================================================
@@ -56,7 +55,7 @@
 // ============================================================================
 
 void
-NotificationHandler__evTerminateRequested(tNotificationPayload EventData)
+EventHandler__evTerminateRequested(tEventPayload EventData)
 {
 	UNUSED(EventData);
 	(void)puts("Goodbye Cruel World!");
@@ -65,10 +64,10 @@ NotificationHandler__evTerminateRequested(tNotificationPayload EventData)
 
 int main(void)
 {
-	tNotificationPayload ev = {0};
+	tEventPayload ev = {0};
 	(void)Init(Cwsw_Lib);		// Cwsw_Lib__Init()
 	(void)Init(Cwsw_Arch);		// Cwsw_Arch__Init()
 
-	SendNotification(evTerminateRequested, ev);
+	PostEvent(evTerminateRequested, ev);
 	return EXIT_SUCCESS;
 }

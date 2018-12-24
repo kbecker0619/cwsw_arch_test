@@ -66,11 +66,11 @@ enum eProjectEvents {
 // ============================================================================
 
 
-extern void NotificationHandler__evNotInitialized		(tNotificationPayload EventData);
-extern void NotificationHandler__evTerminateRequested	(tNotificationPayload EventData);
-extern void NotificationHandler__evButtonCommit 		(tNotificationPayload EventData);
-extern void NotificationHandler__evButtonPressed		(tNotificationPayload EventData);
-extern void NotificationHandler__evButtonReleased		(tNotificationPayload EventData);
+extern void EventHandler__evNotInitialized		(tEventPayload EventData);
+extern void EventHandler__evTerminateRequested	(tEventPayload EventData);
+extern void EventHandler__evButtonCommit 		(tEventPayload EventData);
+extern void EventHandler__evButtonPressed		(tEventPayload EventData);
+extern void EventHandler__evButtonReleased		(tEventPayload EventData);
 
 #ifdef	__cplusplus
 }
