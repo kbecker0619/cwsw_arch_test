@@ -1,25 +1,15 @@
-/** @file projevtnames.h
- *	@brief	One-sentence short description of file.
- *
- *	Description:
+/** @file
+ *	@brief	Project-specific event enumerations for simulated events.
  *
  *	Copyright (c) 2018 Kevin L. Becker. All rights reserved.
  *
  *	Original:
  *	Created on: Jan 20, 2018
  *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
  */
 
 #ifndef UT_PROJEVTNAMES_H_
 #define UT_PROJEVTNAMES_H_
-
-#ifdef	__cplusplus
-extern "C" {
-#endif
 
 // ============================================================================
 // ----	Include Files ---------------------------------------------------------
@@ -30,6 +20,11 @@ extern "C" {
 // ----	Project Headers -------------------------
 
 // ----	Module Headers --------------------------
+
+
+#ifdef	__cplusplus
+extern "C" {
+#endif
 
 
 // ============================================================================
@@ -43,10 +38,11 @@ extern "C" {
  * Event. Other than that,
  */
 enum eProjectEvents {
-	evNoEvent,				//!< reserved value, used for initialization
-	evNotInit,              //!< evNotInit
-	evButtonPressed,
-	evButtonCommit,			//!< debounced press event
+	evNoEvent,				/**< reserved value, used for initialization */
+	evNotInit,              /**< By CWSW convention, 1 is always "component not initialized" */
+	evAlreadyInit,			/**< BY CWSW convention, 2 is "already initialized" */
+	evButtonPressed,		/**< debounced press event */
+	evButtonCommit,
 	evButtonReleased,
 	evUpdateUi,
 	evTerminateRequested

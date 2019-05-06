@@ -1,27 +1,25 @@
 /** @file
+ *	@brief	callbacks for simulated event handling.
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Original:
- *	Created on: Jan 27, 2018
- *	Author: kbecker
+ *	Created on: May 2, 2019
+ *	Author: KBECKE35
  */
 
 // ============================================================================
 // ----	Include Files ---------------------------------------------------------
 // ============================================================================
 
-#include "projcfg.h"
-
 // ----	System Headers --------------------------
-#include <stdlib.h>     	/* EXIT_SUCCESS */
+#include <stddef.h>		/* NULL */
+#include <limits.h>		/* INT_MAX */
 
 // ----	Project Headers -------------------------
-#include "cwsw_lib.h"
-#include "cwsw_eventsim.h"
+#include "projcfg.h"
 
 // ----	Module Headers --------------------------
-#include "cwsw_arch.h"
 
 
 // ============================================================================
@@ -40,6 +38,27 @@
 // ----	Module-level Variables ------------------------------------------------
 // ============================================================================
 
+/** UT support for Enter Critical Section behavior.
+ *	@xreq{SR_LIB_0307}
+ */
+bool crit_section_seen = false;
+
+int crit_sec_prot_lvl = 0;
+
+/** UT support for Enter Critical Section behavior.
+ *	Note that here, we're relying on a compile-time constant string that
+ *	will "be there" when this variable is inspected (e.g., does not go out of
+ *	scope).
+ *	@xreq{SR_LIB_0307}
+ */
+char const *crit_sect_file = NULL;
+
+/** UT support for Enter Critical Section behavior.
+ *	@xreq{SR_LIB_0307}
+ */
+int crit_section_line = 0;
+
+
 // ============================================================================
 // ----	Private Prototypes ----------------------------------------------------
 // ============================================================================
@@ -48,20 +67,31 @@
 // ----	Public Functions ------------------------------------------------------
 // ============================================================================
 
+/**	Project-specific configuration to engage Critical Section / Protected Region
+ *	behavior.
+ *
+ *	For the demo app + UT environment for the CWSW Library, we'll define this
+ *	as a macro that supplies information that might be useful to the UT enviro.
+ *
+ *	@xreq{SR_LIB_0307}
+ *
+ *	@ingroup cwsw_lib_crit_section_group
+ */
 void
-EventHandler__evTerminateRequested(tEventPayload EventData)
+cb_lib_demo_cs_enter(int protlvl, char const * const filename, int const lineno)
 {
-	UNUSED(EventData);
-	(void)puts("Goodbye Cruel World!");
+	crit_section_seen = true;
+	crit_sec_prot_lvl = protlvl;
+	crit_sect_file = filename;
+	crit_section_line = lineno;
 }
 
 
-int main(void)
+void
+cb_lib_demo_cs_leave(int protlvl, char const * const filename, int const lineno)
 {
-	tEventPayload ev = {0};
-	(void)Init(Cwsw_Lib);		// Cwsw_Lib__Init()
-	(void)Init(Cwsw_Arch);		// Cwsw_Arch__Init()
-
-	PostEvent(evTerminateRequested, ev);
-	return EXIT_SUCCESS;
+	crit_section_seen = true;
+	crit_sec_prot_lvl = (0 == protlvl) ? INT_MAX : -protlvl;
+	crit_sect_file = filename;
+	crit_section_line = lineno;
 }

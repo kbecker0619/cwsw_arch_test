@@ -55,12 +55,5 @@ dist
 /Debug/
 
 *.bak
-*.cws
-*.ncb
-*.sln
-/*.suo
-*.user
-*.cdb
-cvibuild.cwsw_lib
-/.settings/
-.dep.inc
+*.?~
+*.??~

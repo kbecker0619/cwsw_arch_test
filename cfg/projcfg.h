@@ -1,17 +1,11 @@
 /** @file
  *	@brief	Project Configuration for CWSW Arch Unit test environment
  *
- *	Description:
- *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Original:
  *	Created on: Sep 4, 2016
  *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
  */
 
 #ifndef PROJCFG_H_
@@ -33,6 +27,7 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
+
 
 // ============================================================================
 // ----	Constants -------------------------------------------------------------
@@ -101,55 +96,56 @@ extern "C" {
 	/* This is the configuration intended for development & debugging in a Linux VM */
 	/* The 1st is intended to debug on a PowerPC Target from a Linux development environment */
 	/* The 2nd (Desktop) is intended for building within S32DS on Linux for a Linux debugging session */
-	#define	XPRJ_CVI_Debug			0
-	#define	XPRJ_MSVC_Debug			0
-	#define	XPRJ_Win_MinGW_Debug 	0
+	#define	XPRJ_CVI_Debug				0
+	#define	XPRJ_Win_MSVC_Debug			0
+	#define	XPRJ_Win_MinGW_Debug	 	0
 
 #elif defined(XPRJ_Win_MinGW_Debug)
 	/* This is the configuration intended for development on Windows, using MinGW */
-	#define XPRJ_Win_MinGW_UT		0
-	#define XPRJ_MSVC_Debug			0
-	#define XPRJ_NB_Debug			0
-	#define	XPRJ_CVI_Debug			0
-	#define XPRJ_Debug_Linux_GCC	0
+	#define XPRJ_Win_Cygwin_Debug_UT	0
+	#define XPRJ_Win_MSVC_Debug			0
+	#define XPRJ_NB_Debug				0
+	#define	XPRJ_CVI_Debug				0
+	#define XPRJ_Debug_Linux_GCC		0
 
-#elif defined(XPRJ_Win_MinGW_UT)
+#elif defined(XPRJ_Win_Cygwin_Debug_UT)
 	/* This is the configuration intended for unit test development on Windows, using GCOV */
-	#define XPRJ_Win_MinGW_Debug	0
-	#define XPRJ_MSVC_Debug			0
-	#define XPRJ_NB_Debug			0
-	#define	XPRJ_CVI_Debug			0
-	#define XPRJ_Debug_Linux_GCC	0
+	#define XPRJ_Win_MinGW_Debug		0
+	#define XPRJ_Win_MSVC_Debug			0
+	#define XPRJ_NB_Debug				0
+	#define	XPRJ_CVI_Debug				0
+	#define XPRJ_Debug_Linux_GCC		0
 
 #elif defined(XPRJ_NB_Debug)
-	#define XPRJ_Win_MinGW_Debug    0
-	#define XPRJ_Win_MinGW_UT		0
-	#define XPRJ_Debug_Linux_GCC	0
-	#define XPRJ_MSVC_Debug			0
-	#define	XPRJ_CVI_Debug			0
+	#define XPRJ_Win_MinGW_Debug		0
+	#define XPRJ_Win_Cygwin_Debug_UT	0
+	#define XPRJ_Debug_Linux_GCC		0
+	#define XPRJ_Win_MSVC_Debug			0
+	#define	XPRJ_CVI_Debug				0
 
 #elif defined(XPRJ_Debug_Cx_AtmelSamv71)
 	/* This configuration is intended for the Atmel SAMV71 Xplained Ultra board */
 
-#elif defined(XPRJ_MSVC_Debug)
+#elif defined(XPRJ_Win_MSVC_Debug)
 	/* Visual Studio 8, which is decidedly shy of C11 */
 	/* NOTE: VS8 does not ship w/ headers <stdint.h> or <stdbool.h>, so i found alternate versions
 	 * and copied them into my install directory. i happened to find some web sites w/ versions
 	 * that claimed to work w/ VS8 or VS10, but you could also probably pull them from any other
 	 * compiler you may have installed.
 	 */
-	#define XPRJ_Win_MinGW_Debug	0
-	#define XPRJ_Win_MinGW_UT		0
-	#define XPRJ_Debug_Linux_GCC	0
-	#define XPRJ_NB_Debug			0
-	#define	XPRJ_CVI_Debug			0
+	#define XPRJ_Win_MinGW_Debug		0
+	#define XPRJ_Win_Cygwin_Debug_UT	0
+	#define XPRJ_Debug_Linux_GCC		0
+	#define XPRJ_NB_Debug				0
+	#define	XPRJ_CVI_Debug				0
 
 #elif defined(XPRJ_CVI_Debug)
-	#define	XPRJ_Win_MinGW_Debug 	0
-	#define XPRJ_Win_MinGW_UT		0
-	#define XPRJ_Debug_Linux_GCC	0
-	#define XPRJ_NB_Debug			0
-	#define	XPRJ_MSVC_Debug			0
+#error
+	#define	XPRJ_Win_MinGW_Debug 		0
+	#define XPRJ_Win_Cygwin_Debug_UT	0
+	#define XPRJ_Debug_Linux_GCC		0
+	#define XPRJ_NB_Debug				0
+	#define	XPRJ_Win_MSVC_Debug			0
 
 #else
 #error Must define command-line symbol XPRJ_${ConfigName}
@@ -171,7 +167,7 @@ extern "C" {
 #if (XPRJ_CVI_Debug)
 	#define pic32mz_ef_sk				(-1)	/* must make this mismatch the project def of the same name */
 	// use cwsw simulated events to achieve separation between UI panels
-	#define USE_NOTIFICATION_EVENTS		(1)
+	#define USE_SIMULATED_EVENTS		(1)
 	#define USE_SYS_CLK					(0)
 	#define USE_SYS_DEVCON				(0)
 	#define USE_SYS_PORTS				(0)
@@ -185,11 +181,11 @@ extern "C" {
 #endif
 
 
-/*	Allow for the possibility that USE_NOTIFICATION_EVENTS might be a command-line
+/*	Allow for the possibility that USE_SIMULATED_EVENTS might be a command-line
  *	define. Pick reasonable defaults if not defined.
  */
-#if !defined(USE_NOTIFICATION_EVENTS)
-#define USE_NOTIFICATION_EVENTS			(true)
+#if !defined(USE_SIMULATED_EVENTS)
+#define USE_SIMULATED_EVENTS			(true)
 
 #else
 #endif
@@ -199,11 +195,11 @@ extern "C" {
  *	define. Pick reasonable defaults if not defined.
  */
 #if !defined(BUILD_FOR_UNIT_TEST)
-	#if (XPRJ_Debug_Linux_GCC)	||	\
-		(XPRJ_Win_MinGW_Debug)	||	\
-		(XPRJ_Win_MinGW_UT)		||	\
-		(XPRJ_NB_Debug)			||  \
-		(XPRJ_MSVC_Debug) 		||  \
+	#if (XPRJ_Debug_Linux_GCC)		||	\
+		(XPRJ_Win_MinGW_Debug)		||	\
+		(XPRJ_Win_Cygwin_Debug_UT)	||	\
+		(XPRJ_NB_Debug)				||  \
+		(XPRJ_Win_MSVC_Debug)		||  \
 		(XPRJ_CVI_Debug)
 		#define BUILD_FOR_UNIT_TEST		(true)
 
@@ -254,8 +250,34 @@ extern "C" {
 #endif
 
 
-//	=== dev-on-PC API =========================================================
+/**	Project-specific configuration to engage Critical Section / Protected Region
+ *	behavior.
+ *
+ *	For the demo app + UT environment for the CWSW Library, we'll define this
+ *	as a macro that supplies information that might be useful to the UT enviro.
+ *
+ *	@xreq{SR_LIB_0307}
+ *
+ *	@ingroup cwsw_lib_crit_section_group
+ */
+#define CWSW_LIB_CRIT_SECT_ENTER(protlvl)	cb_lib_demo_cs_enter(protlvl, __FILE__, __LINE__)
+extern void cb_lib_demo_cs_enter(int protlvl, char const * const filename, int const lineno);
 
+/**	Project-specific configuration, invoked when Critical Section is already
+ *	active.
+ *
+ *	Normally, we recommend the definition of:
+ *		do {} while(0)
+ *
+ *	For this project's UT environment, we'll define this as a macro that
+ *	supplies info that might be useful to the UT enviro.
+ *
+ *	@xreq{SR_LIB_0308}
+ *
+ *	@ingroup cwsw_lib_crit_section_group
+ */
+#define	CWSW_LIB_CRIT_SECT_LEAVE(protlvl)	cb_lib_demo_cs_leave(protlvl, __FILE__, __LINE__)
+extern void cb_lib_demo_cs_leave(int protlvl, char const * const filename, int const lineno);
 
 
 // define specifically for Eclipse CDT parser
