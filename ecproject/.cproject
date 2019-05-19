@@ -32,7 +32,7 @@
 								<option id="gnu.c.compiler.option.include.paths.69417987" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../cwsw_lib/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../cfg&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../cwsw_arch/i386&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../cwsw_arch/include/i386&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1861203073" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;XPRJ_Win_MinGW_${ConfigName}=1&quot;"/>
@@ -53,16 +53,6 @@
 								</inputType>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.1000648696" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base"/>
-						</toolChain>
-					</folderInfo>
-					<folderInfo id="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.593870817" name="/" resourcePath="cwsw_lib/test/app">
-						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.base.1212619218" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.base" unusedChildren="">
-							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.base.2047839402" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.base.862543611"/>
-							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.78269768" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base.448695396"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base.819232186" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base.67048467"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.248709470" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.662287961"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.base.273510071" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.base.1398197783"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.304776829" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.1000648696"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
@@ -105,6 +95,7 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/cwsw_lib&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/cfg&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/cwsw_arch/i386&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../cwsw_arch/i386&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1826982317" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;XPRJ_Win_MinGW_${ConfigName}=1&quot;"/>
@@ -158,6 +149,7 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/cwsw_lib&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/cfg&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/cwsw_arch/i386&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../cwsw_arch/i386&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1490765901" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;XPRJ_Win_MinGW_${ConfigName}=1&quot;"/>
@@ -208,6 +200,12 @@
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306;cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.debug.2021471759;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.881912790">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306;cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.;cdt.managedbuild.tool.gnu.c.compiler.mingw.base.662287961;cdt.managedbuild.tool.gnu.c.compiler.input.84170562">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.2048028624;cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.2048028624.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.685026129;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1977937191">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.release.677639691;cdt.managedbuild.config.gnu.cygwin.exe.release.677639691.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.release.2095036037;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1418933846">
