@@ -23,7 +23,6 @@
       </logicalFolder>
       <logicalFolder name="f2" displayName="include" projectFiles="true">
         <logicalFolder name="i386" displayName="i386" projectFiles="true">
-          <itemPath>cwsw_arch/i386/cwsw_arch.h</itemPath>
           <itemPath>cwsw_arch/include/i386/cwsw_arch.h</itemPath>
         </logicalFolder>
         <itemPath>cwsw_arch/include/cwsw_arch_common.h</itemPath>
@@ -37,11 +36,8 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="cwsw_arch" displayName="cwsw_arch" projectFiles="true">
-        <logicalFolder name="i386" displayName="i386" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>cwsw_arch/i386/src/cwsw_arch.c</itemPath>
-          </logicalFolder>
-          <itemPath>cwsw_arch/i386/README.md</itemPath>
+        <logicalFolder name="src" displayName="src" projectFiles="true">
+          <itemPath>cwsw_arch/src/i386/ </itemPath>
         </logicalFolder>
         <itemPath>cwsw_arch/.gitignore</itemPath>
         <itemPath>cwsw_arch/LICENSE</itemPath>
@@ -129,18 +125,14 @@
       </item>
       <item path="cwsw_arch/README.md" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="cwsw_arch/i386/README.md" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="cwsw_arch/i386/cwsw_arch.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="cwsw_arch/i386/src/cwsw_arch.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="cwsw_arch/include/cwsw_arch_common.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
       <item path="cwsw_arch/include/i386/cwsw_arch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="cwsw_arch/src/i386/ " ex="false" tool="3" flavor2="0">
       </item>
       <item path="cwsw_lib/LICENSE" ex="false" tool="3" flavor2="0">
       </item>
@@ -230,12 +222,6 @@
       <item path="cwsw_arch/LICENSE" ex="false" tool="3" flavor2="0">
       </item>
       <item path="cwsw_arch/README.md" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="cwsw_arch/i386/README.md" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="cwsw_arch/i386/cwsw_arch.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="cwsw_arch/i386/src/cwsw_arch.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="cwsw_arch/include/cwsw_arch_common.h"
             ex="false"
