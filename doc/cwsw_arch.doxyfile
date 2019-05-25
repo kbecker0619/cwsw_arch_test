@@ -43,6 +43,7 @@ EXCLUDE         += ../cwsw_lib/doc/doc_lib/images/README.md
 INPUT           += ../cwsw_arch/src
 INPUT           += ../cwsw_arch/include
 INCLUDE_PATH    += ../cwsw_arch/include
+EXCLUDE			+= ../cwsw_arch/include/i386/README.md
 
 # documentation inputs
 INPUT			+= ../cwsw_arch/doc/doc_arch
