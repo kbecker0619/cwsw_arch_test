@@ -19,7 +19,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.base.669297464" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.PE" id="cdt.managedbuild.target.gnu.platform.mingw.base.1626657048" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.mingw.base"/>
-							<builder buildPath="${workspace_loc:/cwsw_arch}/Debug" id="cdt.managedbuild.tool.gnu.builder.mingw.base.582777295" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
+							<builder buildPath="${workspace_loc:/cwsw_arch-integration}/Debug" id="cdt.managedbuild.tool.gnu.builder.mingw.base.582777295" keepEnvironmentInBuildfile="false" name="CDT Internal Builder" superClass="cdt.managedbuild.tool.gnu.builder.mingw.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.base.862543611" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.base">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.617775704" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
@@ -30,9 +30,9 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.662287961" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.base">
 								<option id="gnu.c.compiler.option.include.paths.69417987" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../cwsw_lib/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../cfg&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../cwsw_arch/include/i386&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../cwsw_lib/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../cwsw_arch/include/i386&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1861203073" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;XPRJ_Win_MinGW_${ConfigName}=1&quot;"/>
@@ -56,7 +56,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="cwsw_lib/test/app|cwsw_lib/test/ut|ut|ut/ut_arch/cwsw_arch_test.c|ut/ut_lib/cwsw_lib_test.c|ut/cwsw_arch_test.c|ut/main.c|ut/cwsw_lib_test.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="cwsw_arch/test|cwsw_lib/test" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -79,7 +79,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.cygwin.exe.release.677639691." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.cygwin.exe.release.177974576" name="Cygwin GCC" superClass="cdt.managedbuild.toolchain.gnu.cygwin.exe.release">
 							<targetPlatform id="cdt.managedbuild.target.gnu.platform.cygwin.exe.release.1821374085" name="Debug Platform" superClass="cdt.managedbuild.target.gnu.platform.cygwin.exe.release"/>
-							<builder buildPath="${workspace_loc:/cwsw_arch_prj}/Release" id="cdt.managedbuild.target.gnu.builder.cygwin.exe.release.236578459" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.cygwin.exe.release"/>
+							<builder buildPath="${workspace_loc:/cwsw_arch-integration}/Release" id="cdt.managedbuild.target.gnu.builder.cygwin.exe.release.236578459" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.cygwin.exe.release"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.cygwin.exe.release.1959339339" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.cygwin.exe.release">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.874800251" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
@@ -135,7 +135,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.2048028624." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.cygwin.base.625324915" name="Cygwin GCC" superClass="cdt.managedbuild.toolchain.gnu.cygwin.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.Cygwin_PE" id="cdt.managedbuild.target.gnu.platform.cygwin.base.1025642148" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.cygwin.base"/>
-							<builder buildPath="${workspace_loc:/cwsw_arch}/Debug" id="cdt.managedbuild.target.gnu.builder.cygwin.base.2117577352" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.cygwin.base"/>
+							<builder buildPath="${workspace_loc:/cwsw_arch-integration}/Debug" id="cdt.managedbuild.target.gnu.builder.cygwin.base.2117577352" keepEnvironmentInBuildfile="false" name="Gnu Make Builder" superClass="cdt.managedbuild.target.gnu.builder.cygwin.base"/>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.cygwin.base.1203621499" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.cygwin.base">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1479602719" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
@@ -175,22 +175,19 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.cygwin.base.1104531338" name="Cygwin C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.cygwin.base"/>
 						</toolChain>
 					</folderInfo>
-					<sourceEntries>
-						<entry excluding="ut/ut_lib|app/main.c|ut/ut_arch/cwsw_arch_test.c|ut/ut_lib/cwsw_lib_test.c|ut/cwsw_arch_test.c|ut/main.c|ut/cwsw_lib_test.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-					</sourceEntries>
 				</configuration>
 			</storageModule>
 			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 		</cconfiguration>
 	</storageModule>
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-		<project id="cwsw_arch.cdt.managedbuild.target.gnu.exe.740921228" name="Executable" projectType="cdt.managedbuild.target.gnu.exe"/>
+		<project id="cwsw_arch-integration.cdt.managedbuild.target.gnu.exe.740921228" name="Executable" projectType="cdt.managedbuild.target.gnu.exe"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="Debug">
-			<resource resourceType="PROJECT" workspacePath="/cwsw_arch"/>
+			<resource resourceType="PROJECT" workspacePath="/cwsw_arch-integration"/>
 		</configuration>
 		<configuration configurationName="Release">
 			<resource resourceType="PROJECT" workspacePath="/cwsw_arch"/>

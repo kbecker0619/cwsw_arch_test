@@ -1,0 +1,50 @@
+# Customized Doxyfile for CWSW Arch component
+#   This configuration superclasses the component-specific Doxy configuration for this project, 
+#	and provides a customization of it specifically for this developer.
+
+# include the default cwsw documentation settings
+@INCLUDE		 = ../cwsw_lib/doc/doc_lib/cwsw.doxyfile
+LAYOUT_FILE      = ../cwsw_lib/doc/doc_lib/Doxy_Layout.xml
+
+# methinks maybe i'll have to forego IMAGE_PATH because i see each component having its own
+# IMAGE_PATH     = doc_lib/images
+
+# specify front page for Doxy output
+INPUT            = ../README.md
+
+# ===== COMPONENT CWSW LIBRARY =========================================
+#   note because of doxy's approach, we need to duplicate here the settings from the reused
+#   component. directories are all relative to the folder which holds the top-level doxy
+#   configuration.
+
+# component input files
+INPUT           += ../cwsw_lib/src
+INPUT           += ../cwsw_lib/include
+INCLUDE_PATH    += ../cwsw_lib/include
+EXCLUDE         += ../cwsw_lib/src/README.md
+
+# documentation inputs
+INPUT			+= ../cwsw_lib/doc/doc_lib
+EXCLUDE			+= ../cwsw_lib/doc/doc_lib/README.md
+EXCLUDE         += ../cwsw_lib/doc/doc_lib/images/README.md
+
+# configuration inputs
+#INPUT          += ../test/cfg
+#INCLUDE_PATH   += ../test/cfg
+
+# Unit test inputs
+#   don't enable if you also enable app as input - competing versions of main()
+#INPUT			+= ../test/ut
+#EXCLUDE        += ../test/ut/README.md
+#INCLUDE_PATH	+= ../test/ut
+
+# ===== COMPONENT CWSW ARCH ============================================
+# component input files
+INPUT           += ../cwsw_arch/src
+INPUT           += ../cwsw_arch/include
+INCLUDE_PATH    += ../cwsw_arch/include
+
+# documentation inputs
+INPUT			+= ../cwsw_arch/doc/doc_arch
+#EXCLUDE        += ../cwsw_arch/doc/doc_arch/README.md
+#EXCLUDE		+= ../cwsw_arch/doc/doc_arch/images/README.md
