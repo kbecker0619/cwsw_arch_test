@@ -27,16 +27,9 @@ INCLUDE_PATH    += ../cwsw_lib/include
 INPUT			+= ../cwsw_lib/doc
 EXCLUDE			+= ../cwsw_lib/doc/README.md
 
-# configuration inputs for the architecture integration project
-#INPUT			+= ../test/cfg
-#INCLUDE_PATH	+= ../test/cfg
-
-# Unit test inputs for the architecture integration project
-#INPUT			+= ../test/ut
-
 
 # ===== COMPONENT CWSW ARCH ============================================
-# component input filesF
+# component input files
 INPUT			+= ../cwsw_arch/src
 INPUT			+= ../cwsw_arch/include
 INCLUDE_PATH	+= ../cwsw_arch/include
@@ -46,3 +39,13 @@ EXCLUDE			+= ../cwsw_arch/include/i386/README.md
 INPUT			+= ../cwsw_arch/doc
 EXCLUDE			+= ../cwsw_arch/doc/README.md
 EXCLUDE         += ../cwsw_arch/doc/doc_lib_stub
+
+
+# ===== INTEGRATION DEMO + TEST ========================================
+# configuration inputs for the architecture integration project
+INPUT			+= ../test/cfg
+INCLUDE_PATH	+= ../test/cfg
+
+# Unit test inputs for the architecture integration project
+#INPUT			+= ../test/ut
+

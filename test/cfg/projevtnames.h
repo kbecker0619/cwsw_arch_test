@@ -3,9 +3,8 @@
  *
  *	Copyright (c) 2018 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Jan 20, 2018
- *	Author: kbecker
+ *	@author kbecker
  */
 
 #ifndef UT_PROJEVTNAMES_H_

@@ -10,8 +10,9 @@
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>cwsw_lib</sourceRootElem>
-                <sourceRootElem>cwsw_arch</sourceRootElem>
+                <sourceRootElem>.</sourceRootElem>
+                <sourceRootElem>../cwsw_arch</sourceRootElem>
+                <sourceRootElem>../cwsw_lib</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

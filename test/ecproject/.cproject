@@ -55,6 +55,20 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.1000648696" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base"/>
 						</toolChain>
 					</folderInfo>
+					<folderInfo id="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.1429902957" name="/" resourcePath="cwsw_lib">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.base.426987015" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.base" unusedChildren="">
+							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.base.409673781" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.base.862543611">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.121291508" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.1487056911" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base.448695396"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base.436100123" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base.67048467"/>
+							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.1468983986" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.662287961">
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1945212794" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.base.602640728" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.base.1398197783"/>
+							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.912857457" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.1000648696"/>
+						</toolChain>
+					</folderInfo>
 					<sourceEntries>
 						<entry excluding="cwsw_arch/test|cwsw_lib/test" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
@@ -196,16 +210,16 @@
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306;cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.debug.2021471759;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.881912790">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306;cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.;cdt.managedbuild.tool.gnu.c.compiler.mingw.base.662287961;cdt.managedbuild.tool.gnu.c.compiler.input.84170562">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306;cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.;cdt.managedbuild.tool.gnu.c.compiler.mingw.base.662287961;cdt.managedbuild.tool.gnu.c.compiler.input.84170562">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.release.677639691;cdt.managedbuild.config.gnu.cygwin.exe.release.677639691.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.release.2095036037;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1418933846">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.2048028624;cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.2048028624.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.685026129;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1977937191">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.release.677639691;cdt.managedbuild.config.gnu.cygwin.exe.release.677639691.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.release.2095036037;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1418933846">
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306;cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.exe.debug.2021471759;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.881912790">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306;cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.478038211;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.380324885">

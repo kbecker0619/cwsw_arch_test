@@ -43,7 +43,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\cwsw_arch\i386;..\cwsw_lib;..\cfg;..\cfg\vs2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\cfg;..\..\cwsw_arch\include\i386;..\..\cwsw_lib\include;..\cfg\vs2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;XPRJ_Win_MSVC_$(Configuration)=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -80,22 +80,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include=".dep.inc" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\cwsw_lib\ctassert.h" />
-    <ClInclude Include="..\cwsw_arch\i386\cwsw_arch.h" />
-    <ClInclude Include="..\cwsw_arch\cwsw_arch_common.h" />
-    <ClInclude Include="..\cwsw_lib\cwsw_eventsim.h" />
-    <ClInclude Include="..\cwsw_lib\cwsw_lib.h" />
+    <ClInclude Include="..\..\cwsw_arch\include\cwsw_arch_common.h" />
+    <ClInclude Include="..\..\cwsw_arch\include\i386\cwsw_arch.h" />
+    <ClInclude Include="..\..\cwsw_arch\include\i386\peripheral\ports\ports_api.h" />
+    <ClInclude Include="..\..\cwsw_arch\include\i386\system\clk\sys_clk.h" />
+    <ClInclude Include="..\..\cwsw_arch\include\i386\system\ports\sys_ports.h" />
+    <ClInclude Include="..\..\cwsw_lib\include\ctassert.h" />
+    <ClInclude Include="..\..\cwsw_lib\include\cwsw_eventsim.h" />
+    <ClInclude Include="..\..\cwsw_lib\include\cwsw_lib.h" />
+    <ClInclude Include="..\..\cwsw_lib\include\ptypes.h" />
     <ClInclude Include="..\cfg\projcfg.h" />
     <ClInclude Include="..\cfg\projevtnames.h" />
-    <ClInclude Include="..\cwsw_lib\include\ptypes.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\cwsw_arch\include\i386\peripheral\ports\ports_api.c" />
+    <ClCompile Include="..\..\cwsw_arch\src\i386\cwsw_arch.c" />
+    <ClCompile Include="..\..\cwsw_lib\src\cwsw_lib.c" />
     <ClCompile Include="..\app\sim_event_cb.c" />
-    <ClCompile Include="..\cwsw_arch\i386\src\cwsw_arch.c" />
-    <ClCompile Include="..\cwsw_lib\src\cwsw_lib.c" />
     <ClCompile Include="..\app\main.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
