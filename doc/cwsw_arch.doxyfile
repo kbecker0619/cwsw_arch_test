@@ -12,40 +12,37 @@ LAYOUT_FILE      = ../cwsw_lib/doc/doc_lib/Doxy_Layout.xml
 # specify front page for Doxy output
 INPUT            = ../README.md
 
+
 # ===== COMPONENT CWSW LIBRARY =========================================
-#   note because of doxy's approach, we need to duplicate here the settings from the reused
-#   component. directories are all relative to the folder which holds the top-level doxy
-#   configuration.
+#   note because of doxy's approach, we need to duplicate here the doxymentation settings 
+#   from the reused component. directories are all relative to the folder which holds the 
+#   top-level doxy configuration.
 
 # component input files
 INPUT           += ../cwsw_lib/src
 INPUT           += ../cwsw_lib/include
 INCLUDE_PATH    += ../cwsw_lib/include
-EXCLUDE         += ../cwsw_lib/src/README.md
 
 # documentation inputs
-INPUT			+= ../cwsw_lib/doc/doc_lib
-EXCLUDE			+= ../cwsw_lib/doc/doc_lib/README.md
-EXCLUDE         += ../cwsw_lib/doc/doc_lib/images/README.md
+INPUT			+= ../cwsw_lib/doc
+EXCLUDE			+= ../cwsw_lib/doc/README.md
 
-# configuration inputs
-#INPUT          += ../test/cfg
-#INCLUDE_PATH   += ../test/cfg
+# configuration inputs for the architecture integration project
+#INPUT			+= ../test/cfg
+#INCLUDE_PATH	+= ../test/cfg
 
-# Unit test inputs
-#   don't enable if you also enable app as input - competing versions of main()
+# Unit test inputs for the architecture integration project
 #INPUT			+= ../test/ut
-#EXCLUDE        += ../test/ut/README.md
-#INCLUDE_PATH	+= ../test/ut
+
 
 # ===== COMPONENT CWSW ARCH ============================================
-# component input files
-INPUT           += ../cwsw_arch/src
-INPUT           += ../cwsw_arch/include
-INCLUDE_PATH    += ../cwsw_arch/include
+# component input filesF
+INPUT			+= ../cwsw_arch/src
+INPUT			+= ../cwsw_arch/include
+INCLUDE_PATH	+= ../cwsw_arch/include
 EXCLUDE			+= ../cwsw_arch/include/i386/README.md
 
 # documentation inputs
-INPUT			+= ../cwsw_arch/doc/doc_arch
-#EXCLUDE        += ../cwsw_arch/doc/doc_arch/README.md
-#EXCLUDE		+= ../cwsw_arch/doc/doc_arch/images/README.md
+INPUT			+= ../cwsw_arch/doc
+EXCLUDE			+= ../cwsw_arch/doc/README.md
+EXCLUDE         += ../cwsw_arch/doc/doc_lib_stub

@@ -1,6 +1,6 @@
 # CWSW MCU Architecture Support
 
-This folder is the top of the "integration project" for the CWSW Arch software libraries.
+This repository is the "integration project" for the CWSW Arch software libraries.
 
 This component is intended to supplement the architecture-specific drivers used in the project.
 
