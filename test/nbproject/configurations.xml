@@ -28,8 +28,8 @@
                      displayName="Component Arch Tests"
                      projectFiles="true"
                      kind="TEST">
-        <itemPath>../cwsw_arch/test/ut/cwsw_arc_test_op_states.c</itemPath>
         <itemPath>../cwsw_arch/test/ut/cwsw_arch_test.c</itemPath>
+        <itemPath>../cwsw_arch/test/ut/cwsw_arch_test_op_states.c</itemPath>
         <itemPath>../cwsw_arch/test/ut/cwsw_arch_test_op_states.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1"
@@ -74,6 +74,7 @@
             <pElem>../cwsw_arch/include/i386</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>BUILD_FOR_UNIT_TEST=99</Elem>
             <Elem>XPRJ_NB_${CONF}</Elem>
           </preprocessorList>
           <warningLevel>2</warningLevel>
@@ -87,12 +88,12 @@
       </compileType>
       <item path="../cwsw_arch/src/i386/cwsw_arch.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="../cwsw_arch/test/ut/cwsw_arc_test_op_states.c"
+      <item path="../cwsw_arch/test/ut/cwsw_arch_test.c"
             ex="false"
             tool="0"
             flavor2="0">
       </item>
-      <item path="../cwsw_arch/test/ut/cwsw_arch_test.c"
+      <item path="../cwsw_arch/test/ut/cwsw_arch_test_op_states.c"
             ex="false"
             tool="0"
             flavor2="0">
@@ -160,6 +161,18 @@
       </item>
       <item path="cfg/projevtnames.h" ex="false" tool="3" flavor2="0">
       </item>
+      <folder path="TestFiles">
+        <cTool>
+          <preprocessorList>
+            <Elem>BUILD_FOR_UNIT_TEST=CUNIT</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <preprocessorList>
+            <Elem>BUILD_FOR_UNIT_TEST=CUNIT</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
       <folder path="TestFiles/f1">
         <linkerTool>
           <output>${TESTDIR}/TestFiles/f1</output>
@@ -199,12 +212,12 @@
       </compileType>
       <item path="../cwsw_arch/src/i386/cwsw_arch.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="../cwsw_arch/test/ut/cwsw_arc_test_op_states.c"
+      <item path="../cwsw_arch/test/ut/cwsw_arch_test.c"
             ex="false"
             tool="0"
             flavor2="0">
       </item>
-      <item path="../cwsw_arch/test/ut/cwsw_arch_test.c"
+      <item path="../cwsw_arch/test/ut/cwsw_arch_test_op_states.c"
             ex="false"
             tool="0"
             flavor2="0">

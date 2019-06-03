@@ -36,6 +36,7 @@
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1861203073" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;XPRJ_Win_MinGW_${ConfigName}=1&quot;"/>
+									<listOptionValue builtIn="false" value="BUILD_FOR_UNIT_TEST=&quot;CONSOLE&quot;"/>
 								</option>
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.1343424913" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.debugging.level.1355321266" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
@@ -53,20 +54,6 @@
 								</inputType>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.1000648696" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base"/>
-						</toolChain>
-					</folderInfo>
-					<folderInfo id="cdt.managedbuild.config.gnu.cygwin.exe.debug.1569223306.1429902957" name="/" resourcePath="cwsw_lib">
-						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.base.426987015" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.base" unusedChildren="">
-							<tool id="cdt.managedbuild.tool.gnu.assembler.mingw.base.409673781" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.mingw.base.862543611">
-								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.121291508" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
-							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.archiver.mingw.base.1487056911" name="GCC Archiver" superClass="cdt.managedbuild.tool.gnu.archiver.mingw.base.448695396"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base.436100123" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base.67048467"/>
-							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.1468983986" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.662287961">
-								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1945212794" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
-							</tool>
-							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.base.602640728" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.base.1398197783"/>
-							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.912857457" name="MinGW C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.mingw.base.1000648696"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>

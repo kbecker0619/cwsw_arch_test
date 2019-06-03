@@ -47,5 +47,8 @@ INPUT			+= ../test/cfg
 INCLUDE_PATH	+= ../test/cfg
 
 # Unit test inputs for the architecture integration project
-#INPUT			+= ../test/ut
-
+INPUT			+= ../test/ut
+INPUT			+= ../cwsw_lib/test/ut
+EXCLUDE			+= ../cwsw_lib/test/ut/README.md
+INPUT			+= ../cwsw_arch/test/ut
+EXCLUDE			+= ../cwsw_arch/test/ut/README.md
