@@ -4,7 +4,7 @@ url=git@github.com:kbecker0619/cwsw_lib.git
 	branch = development
 [submodule "cwsw_arch"]
 	path = cwsw_arch
-	url = git@github.com:kbecker0619/cwsw_arch_code.git
+url=git@github.com:kbecker0619/cwsw_arch.git
 	branch = development
 [submodule "ut_lib"]
 	path = ut/ut_lib
